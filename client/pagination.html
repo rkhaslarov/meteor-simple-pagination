@@ -1,0 +1,19 @@
+<template name="pagination">
+	<ul class="pagination">
+		{{#if showPrevious}}
+	 		<li class="waves-effect pagination-prev"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+	 	{{/if}}
+	 	{{#if showPages}}
+			{{#each pages}}
+				{{#if isActive}}
+					<li class="waves-effect pagination-item active"><a href="#" data-page="{{this}}">{{this}}</a></li>
+				{{else}}
+					<li class="waves-effect pagination-item "><a href="#" data-page="{{this}}">{{this}}</a></li>
+				{{/if}}
+			{{/each}}
+		{{/if}}
+		{{#if showNext}}
+			<li class="waves-effect pagination-next"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+		{{/if}}
+	</ul>
+</template>
